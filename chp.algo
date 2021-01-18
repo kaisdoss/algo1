@@ -1,0 +1,21 @@
+ALGORITHM algorithm_name
+VAR
+   paragraghe :STRING;
+   contVowels, contWords, contCharacters :INTEGER;
+   contVowels:=0;
+    contWords:=1;
+    contCharacters:=0;
+BEGIN
+READ(paragraghe);
+FOR i FROM 0 TO length(paragraghe)-1;
+
+IF (paragraghe[i] = (a,i,o,u,e,y)) THEN
+   contVowels :=  contVowels+1
+ELSE if  (paragraghe[i]= (' ')) then
+   contWords++
+
+END_IF
+END_FOR
+    write("nombre of vowels: ", contVowels,"nombre of Words:",contWords,"nombre of Characters:",length(paragraghe));
+
+END
